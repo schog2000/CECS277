@@ -1,12 +1,12 @@
 package Risk;
 
 import java.util.ArrayList;
+import java.util.Collections;
 public class Deck {
-	ArrayList<CardsTerritory> deckTerritory = new ArrayList<CardsTerritory>();
-	ArrayList<CardsMission> deckMission = new ArrayList<CardsMission>(); 
-	public void deckTerritory() {
+	private ArrayList<CardsTerritory> deckTerritory = new ArrayList<CardsTerritory>();
+	private ArrayList<CardsMission> deckMission = new ArrayList<CardsMission>(); 
+	public void deckTerritoryCards() {
 		ArrayList<String> territory = new ArrayList<String>();
-		
 		territory.add("Alaska");
 		territory.add("North West Territory");
 		territory.add("Greenland");
@@ -49,7 +49,25 @@ public class Deck {
 		territory.add("New Guinea");
 		territory.add("Western Australia");
 		territory.add("Eastern Australia");
+		
 		ArrayList<String> troop = new ArrayList<String>();
+		troop.add("Infantry");
+		troop.add("Cavalry");
+		troop.add("Artillery");
+		
+		int countTer = 0;
+		int countTrp = 0;
+		while(countTer < territory.size()) {
+			deckTerritory.add(new CardsTerritory(territory.get(countTer),troop.get(countTrp)));
+			countTer++;
+			countTrp++;
+			if(countTrp == 3) {
+				countTrp = 0;
+			}
+		}
+		
+		Collections.shuffle(deckTerritory);
+		
 	}
 	public void deckMission() {
 		

@@ -66,11 +66,33 @@ public class Deck {
 			}
 		}
 		
+	}
+	public void shuffleTer() {
 		Collections.shuffle(deckTerritory);
-		
 	}
 	public void deckMission() {
+		ArrayList<String> mission = new ArrayList<String>();
+		mission.add("Destroy the entire red army");
+		mission.add("Destroy the entire blue army");
+		mission.add("Destroy the entire yellow army");
+		mission.add("Destroy the entire green army");
+		mission.add("Destroy the entire black army");
+		mission.add("Destroy the entire gray army");
+		mission.add("Capture 18 territories and occupy each with at least two troops");
+		mission.add("Capture Europe,Australia, and one other continent");
+		mission.add("Capture Europe, South America, and one other continent");
+		mission.add("Capture North America and Africa");
+		mission.add("Capture North America and Australia");
+		mission.add("Capture Asia and South America");
+		mission.add("Capture Asia and Africa");
+		mission.add("Capture 24 territories");
 		
+		for(int i=0;i<mission.size();i++) {
+			deckMission.add(new CardsMission(mission.get(i),i));
+		}
+	}
+	public void shuffleMiss() {
+		Collections.shuffle(deckMission);
 	}
 
 }

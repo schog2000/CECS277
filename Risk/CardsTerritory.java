@@ -13,11 +13,4 @@ public class CardsTerritory {
 	public String getTroop() {
 		return troop;
 	}
-	public void setTerritory(String territory) {
-		this.territory = territory;
-	}
-	public void setTroop(String troop) {
-		this.troop = troop;
-	}
-
 }

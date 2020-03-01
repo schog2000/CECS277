@@ -58,7 +58,7 @@ public class Deck {
 		int countTer = 0;
 		int countTrp = 0;
 		while(countTer < territory.size()) {
-			deckTerritory.add(new CardsTerritory(territory.get(countTer),troop.get(countTrp)));
+			deckTerritory.add(new CardsTerritory(territory.get(countTer),troop.get(countTrp),countTrp));
 			countTer++;
 			countTrp++;
 			if(countTrp == 3) {

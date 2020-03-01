@@ -9,7 +9,7 @@ public class Troops {
 		this.cavalry = 5;
 		this.artillery = 10;
 	}
-	public  int getInf() {
+	public int getInf() {
 		return infantry;
 	}
 	public int getCav() {

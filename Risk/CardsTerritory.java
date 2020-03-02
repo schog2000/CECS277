@@ -20,4 +20,7 @@ public class CardsTerritory {
 	public void setTroopNum(int troopNum) {
 		this.troopNum = troopNum;
 	}
+	public String toString() {
+		return getTroop() + " of " + getTerritory();
+	}
 }

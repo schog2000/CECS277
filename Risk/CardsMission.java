@@ -16,5 +16,8 @@ public class CardsMission {
 	public void setMissionVal(int missionVal) {
 		this.missionVal = missionVal;
 	}
+	public String toString() {
+		return getMission();
+	}
 
 }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 public class StartUp {
 	public void start() {
-		int userInput;
+		int userInput = 0;
 		Scanner scnr = new Scanner(System.in);
 		System.out.println("How many players are playing?");
 		int whileKey = 1;
@@ -14,7 +14,7 @@ public class StartUp {
 				if (userInput > 6) {
 					System.out.println("Too many players");
 				}
-				else if(userInput < 2) {
+				else if(userInput < 0) {
 					System.out.println("Too few of players");
 				}
 				else {
@@ -25,6 +25,7 @@ public class StartUp {
 				System.out.println("Please select a number");
 			}
 		}
+		ArrayList<ArrayList> players = new ArrayList<ArrayList>(userInput);
 	}
 
 }

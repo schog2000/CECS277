@@ -3,7 +3,7 @@ package Risk;
 import java.util.ArrayList;
 public class Player {
 	private String color;
-	private ArrayList<Troops> army = new ArrayList<Troops>();
+	private int players;
 	public Player(String color) {
 		this.color = color;
 	}
@@ -13,8 +13,4 @@ public class Player {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	public ArrayList<Troops> getArmy(){
-		return army;
-	}
-
 }

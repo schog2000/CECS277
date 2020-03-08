@@ -1,7 +1,6 @@
 package Risk;
 
 import java.util.Scanner;
-import java.util.List;
 import java.util.ArrayList;
 public class StartUp {
 	public void start() {
@@ -36,10 +35,46 @@ public class StartUp {
 					for(int i=0;i<userInput;i++) {
 						System.out.println("Select a color to be");
 						color = scnr.next().toUpperCase();
-						if(color == "Red") {
-							ArrayList<Integer> redTroops = new ArrayList<Integer>();
-							redTroops.add(30);
-							players.add(redTroops);
+						if(plyrColor.contains(color)) {
+							if(color == "Red") {
+								ArrayList<Integer> redTroops = new ArrayList<Integer>();
+								redTroops.add(30);
+								players.add(redTroops);
+								plyrColor.remove("Red");
+							}
+							else if(color == "Yellow") {
+								ArrayList<Integer> yellowTroops = new ArrayList<Integer>();
+								yellowTroops.add(30);
+								players.add(yellowTroops);
+								plyrColor.remove("Yellow");
+							}
+							else if(color == "Blue") {
+								ArrayList<Integer> blueTroops = new ArrayList<Integer>();
+								blueTroops.add(30);
+								players.add(blueTroops);
+								plyrColor.remove("Blue");
+							}
+							else if(color == "Green") {
+								ArrayList<Integer> greenTroops = new ArrayList<Integer>();
+								greenTroops.add(30);
+								players.add(greenTroops);
+								plyrColor.remove("Green");
+							}
+							else if(color == "Black") {
+								ArrayList<Integer> blckTroops = new ArrayList<Integer>();
+								blckTroops.add(30);
+								players.add(blckTroops);
+								plyrColor.remove("Black");
+							}
+							else {
+								ArrayList<Integer> grayTroops = new ArrayList<Integer>();
+								grayTroops.add(30);
+								players.add(grayTroops);
+								plyrColor.remove("Gray");
+							}
+						}
+						else {
+							System.out.println("Please choose another color.");
 						}
 					}
 					whileKey = 0;

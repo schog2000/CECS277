@@ -3,6 +3,17 @@ package Risk;
 import java.util.Scanner;
 import java.util.ArrayList;
 public class StartUp {
+	private ArrayList<ArrayList> playerTrps = new ArrayList<ArrayList>();
+	private ArrayList<ArrayList> playerTer = new ArrayList<ArrayList>();
+	public StartUp() {
+		
+	}
+	public ArrayList<ArrayList> getStrtUpList(){
+		return playerTrps;
+	}
+	public ArrayList<ArrayList> getStrtUpTer(){
+		return playerTer;
+	}
 	public void start() {
 		Deck callDeck = new Deck();
 		callDeck.deckTerritoryCards();
@@ -23,7 +34,6 @@ public class StartUp {
 					System.out.println("Too few of players");
 				}
 				else {
-					ArrayList<ArrayList> players = new ArrayList<ArrayList>(userInput);
 					ArrayList<String> plyrColor = new ArrayList<String>();
 					plyrColor.add("Red");
 					plyrColor.add("Yellow");
@@ -39,37 +49,37 @@ public class StartUp {
 							if(color == "Red") {
 								ArrayList<Integer> redTroops = new ArrayList<Integer>();
 								redTroops.add(30);
-								players.add(redTroops);
+								getStrtUpList().add(redTroops);
 								plyrColor.remove("Red");
 							}
 							else if(color == "Yellow") {
 								ArrayList<Integer> yellowTroops = new ArrayList<Integer>();
 								yellowTroops.add(30);
-								players.add(yellowTroops);
+								getStrtUpList().add(yellowTroops);
 								plyrColor.remove("Yellow");
 							}
 							else if(color == "Blue") {
 								ArrayList<Integer> blueTroops = new ArrayList<Integer>();
 								blueTroops.add(30);
-								players.add(blueTroops);
+								getStrtUpList().add(blueTroops);
 								plyrColor.remove("Blue");
 							}
 							else if(color == "Green") {
 								ArrayList<Integer> greenTroops = new ArrayList<Integer>();
 								greenTroops.add(30);
-								players.add(greenTroops);
+								getStrtUpList().add(greenTroops);
 								plyrColor.remove("Green");
 							}
 							else if(color == "Black") {
 								ArrayList<Integer> blckTroops = new ArrayList<Integer>();
 								blckTroops.add(30);
-								players.add(blckTroops);
+								getStrtUpList().add(blckTroops);
 								plyrColor.remove("Black");
 							}
 							else {
 								ArrayList<Integer> grayTroops = new ArrayList<Integer>();
 								grayTroops.add(30);
-								players.add(grayTroops);
+								getStrtUpList().add(grayTroops);
 								plyrColor.remove("Gray");
 							}
 						}

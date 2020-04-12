@@ -5,14 +5,14 @@ import java.util.ArrayList;
 public class StartUp {
 	private ArrayList<Territory> territory = new ArrayList<Territory>();
 	private ArrayList<ArrayList> playerTrps = new ArrayList<ArrayList>();
-	private ArrayList<ArrayList> playerTer = new ArrayList<ArrayList>();
+	private ArrayList<ArrayList> playerTerCards = new ArrayList<ArrayList>();
 	public StartUp() {
 		
 	}
-	public StartUp(ArrayList<Territory> territory, ArrayList<ArrayList> playerTrps, ArrayList<ArrayList> playerTer) {
+	public StartUp(ArrayList<Territory> territory, ArrayList<ArrayList> playerTrps, ArrayList<ArrayList> playerTerCards) {
 		this.territory = territory;
 		this.playerTrps = playerTrps;
-		this.playerTer = playerTer;
+		this.playerTerCards = playerTerCards;
 	}
 	public ArrayList<Territory> getTerritory(){
 		return territory;
@@ -20,8 +20,8 @@ public class StartUp {
 	public ArrayList<ArrayList> getStrtUpTrps(){
 		return playerTrps;
 	}
-	public ArrayList<ArrayList> getStrtUpTer(){
-		return playerTer;
+	public ArrayList<ArrayList> getTerCards(){
+		return playerTerCards;
 	}
 	public void createTer() {
 		getTerritory().add(new Territory("Alaska"));
@@ -126,6 +126,8 @@ public class StartUp {
 								getStrtUpTrps().add(redTroops);
 								selectedClr.add("Red");
 								plyrColor.remove("Red");
+								ArrayList<CardsTerritory> playerRedCardTer = new ArrayList<CardsTerritory>();
+								getTerCards().add(playerRedCardTer);
 							}
 							else if(color == "Yellow") {
 								ArrayList<Integer> yellowTroops = new ArrayList<Integer>();
@@ -133,6 +135,8 @@ public class StartUp {
 								getStrtUpTrps().add(yellowTroops);
 								selectedClr.add("Yellow");
 								plyrColor.remove("Yellow");
+								ArrayList<CardsTerritory> playerYelCardTer = new ArrayList<CardsTerritory>();
+								getTerCards().add(playerYelCardTer);
 							}
 							else if(color == "Blue") {
 								ArrayList<Integer> blueTroops = new ArrayList<Integer>();
@@ -140,6 +144,8 @@ public class StartUp {
 								getStrtUpTrps().add(blueTroops);
 								selectedClr.add("Blue");
 								plyrColor.remove("Blue");
+								ArrayList<CardsTerritory> playerBluCardTer = new ArrayList<CardsTerritory>();
+								getTerCards().add(playerBluCardTer);
 							}
 							else if(color == "Green") {
 								ArrayList<Integer> greenTroops = new ArrayList<Integer>();
@@ -147,6 +153,8 @@ public class StartUp {
 								getStrtUpTrps().add(greenTroops);
 								selectedClr.add("Green");
 								plyrColor.remove("Green");
+								ArrayList<CardsTerritory> playerGrnCardTer = new ArrayList<CardsTerritory>();
+								getTerCards().add(playerGrnCardTer);
 							}
 							else if(color == "Black") {
 								ArrayList<Integer> blckTroops = new ArrayList<Integer>();
@@ -154,6 +162,8 @@ public class StartUp {
 								getStrtUpTrps().add(blckTroops);
 								selectedClr.add("Black");
 								plyrColor.remove("Black");
+								ArrayList<CardsTerritory> playerBlckCardTer = new ArrayList<CardsTerritory>();
+								getTerCards().add(playerBlckCardTer);
 							}
 							else {
 								ArrayList<Integer> grayTroops = new ArrayList<Integer>();
@@ -161,6 +171,8 @@ public class StartUp {
 								getStrtUpTrps().add(grayTroops);
 								selectedClr.add("Gray");
 								plyrColor.remove("Gray");
+								ArrayList<CardsTerritory> playerGrayCardTer = new ArrayList<CardsTerritory>();
+								getTerCards().add(playerGrayCardTer);
 							}
 						}
 						else {
